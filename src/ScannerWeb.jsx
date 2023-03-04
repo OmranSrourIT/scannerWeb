@@ -151,7 +151,7 @@ export class ScannerWeb extends Component {
             used to load available scanner devices to UI to allow user to choose any of them
             ***********************************************************************************************************/
             $(scannermanager.getAvailableScanners().GetAvailableScannersResult.ScannerDevices).each(function (index, item) {
-                debugger;
+                 
                 $("#lstDeviceID").append($("<option/>").attr("Value", item.Id).text(item.Name));
             });
 
@@ -236,7 +236,7 @@ export class ScannerWeb extends Component {
 
         }
         else {
-            debugger;
+           
             if (scan.StatusMessage == "Device not found.") {
                 alert("جهاز ماسح الضوئي غير متصل، يرجى التوصيل بجهاز الكمبيوتر");
             } else {
